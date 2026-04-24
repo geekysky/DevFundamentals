@@ -8,7 +8,11 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 // Socket.io connections 
-
+io.on('connection', (clientSocket) => {
+   clientSocket.on('user-message', message => {
+    io.emit('message', message);
+   })
+});
 
 
 
