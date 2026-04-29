@@ -1,0 +1,12 @@
+step 1 :
+start docker 
+
+step 2 : 
+run this command on terminal:
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+
+step 3:
+command "docker ps" to access the bash shell 
+
+step 4:
+command ping for health check of the redis server 
